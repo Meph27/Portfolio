@@ -1,0 +1,277 @@
+:root {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+#fullpage {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+h4 {
+  color: black;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section h3 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  font-family: "Gotham";
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+#progress-cont {
+  opacity: 0;
+  position: fixed;
+  top: 10px;
+  right: 100px;
+  transition: opacity 0.5s ease-in;
+  z-index: 100;
+  height: 0;
+}
+.track-cont {
+  position: absolute;
+}
+.progress-path {
+  transition: stroke;
+}
+
+#introduction h1 {
+  font: 800 200px;
+  color: rgb(212, 57, 30);
+}
+#introduction {
+  /* background-image: url("../public/paintsss.png"); */
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#navigator-cont {
+  width: 90%;
+  height: max-content;
+  position: fixed;
+  bottom: 2em;
+  left: 50%;
+  display: block;
+}
+
+#navprog-cont {
+  display: flex;
+  position: fixed;
+  height: 0.3em;
+  box-sizing: border-box;
+}
+#nav-prog {
+  display: block;
+  height: 0.3em;
+}
+#navigator {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+#navigator .a-cont {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.button {
+  position: relative;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s transform;
+}
+.link-label span {
+  padding: 3px 10px;
+  font-size: x-small;
+
+  opacity: 0.4;
+}
+
+#navigator .active,
+.button:hover,
+.button:focus {
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+.loader-cont {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+.loader-el,
+.loader-el2 {
+  margin: 40px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  display: block;
+  transition: all;
+  position: absolute;
+  animation: loader-square 2s infinite;
+}
+.loader-el2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader-square {
+  0% {
+    transform: translateY(20px);
+    background-color: rgb(255, 123, 71);
+  }
+  25% {
+    transform: translate3d(20px, 20px, 0) scale(2);
+    background-color: orange;
+  }
+  50% {
+    transform: translate3d(20px, 0px, 0);
+    background-color: rgb(168, 218, 115);
+  }
+  75% {
+    transform: scale(2.5);
+    background-color: rgb(60, 213, 182);
+  }
+  100% {
+    transform: translateY(20px);
+    background-color: rgb(88, 176, 210);
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  #introduction h1 {
+    font-size: 110px;
+  }
+  section {
+    padding: 0 40px;
+  }
+  section h3 {
+    font-size: 2em;
+    max-width: 800px;
+    font-weight: 600;
+  }
+
+  .proj-desc p {
+    margin: 0;
+    text-align: left;
+    display: block;
+    line-height: 1.7em;
+    width: 350px;
+  }
+  .img-span img {
+    height: 45px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .carousel-info {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 40px;
+  }
+  .carousel-root .slide img {
+    max-width: max-content;
+    max-height: 60vh;
+  }
+  .carousel-root .control-dots {
+    margin-top: 2em;
+    display: flex;
+  }
+  .carousel-root .dot {
+    width: 20% !important;
+    border-radius: 0 !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
+    margin: 0 2px 0 0 !important;
+  }
+  .carousel-status {
+    width: 40px;
+  }
+  .thumb {
+    max-height: 60px;
+    cursor: pointer;
+  }
+  .slide .legend {
+    border-radius: 0 !important;
+    bottom: 20px !important;
+    font-weight: bold;
+  }
+
+  #navigator-cont {
+    width: max-content;
+    right: 1em;
+    left: auto;
+    top: 55%;
+    height: 70%;
+    z-index: 1;
+  }
+  #navigator {
+    height: 100%;
+    flex-direction: column;
+    width: 0.6em;
+  }
+  #navigator .button {
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 0;
+    display: block;
+    transform: rotate(45deg);
+  }
+  #navprog-cont {
+    justify-content: center;
+    height: 100%;
+    width: 0.6em;
+  }
+  #nav-prog {
+    width: 0.1em;
+    border-radius: 5px;
+    transform-origin: top;
+  }
+
+  .link-label {
+    width: max-content;
+    position: absolute;
+    right: 0.5em;
+    text-align: right;
+    left: auto;
+    bottom: auto;
+    margin-top: 0;
+    bottom: -0.25em;
+  }
+  .link-label span {
+    font-size: 11px;
+    font-weight: 800;
+  }
+}
