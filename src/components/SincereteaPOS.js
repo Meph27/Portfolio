@@ -35,7 +35,7 @@ const SincereteaPOS = () => {
         <div className="proj-desc">
           <p>
             For my internship i was part of a team that designed and built a
-            test Point of sale website for a milktea shop. I was assigned in
+            test point of sale website for a milktea shop. I was assigned in
             both back-end and front-end development creating some of the main
             functionalities of the website. During this i learned working with
             REST APIs, subdomains, session based auth, caching, data

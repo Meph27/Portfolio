@@ -8,6 +8,7 @@ const Introduction = () => {
     <section id="introduction" style={{ fontFamily: theme.mainFont }}>
       <div style={{ position: "relative" }}>
         <h1>Ralph Montilla</h1>
+        <h3>Engineer</h3>
         <h3>Developer</h3>
         <h3>Artist</h3>
       </div>

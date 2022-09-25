@@ -7,21 +7,27 @@ const stopPoints = [
     to: "introduction",
     label: "",
     start: 0,
-    stop: 15,
+    stop: 10,
   },
-  { to: "background", label: "About Me", start: 16, stop: 48 },
-  { to: "sincereteapos", label: "Sinceretea POS", start: 81, stop: 100 },
+  { to: "background", label: "About Me", start: 10, stop: 30 },
+  { to: "sincereteapos", label: "Sinceretea POS", start: 30, stop: 50 },
   {
     to: "lessandrapass",
     label: "Lessandra HOA",
-    start: 100,
-    stop: 200,
+    start: 50,
+    stop: 70,
   },
   {
     to: "mallappcs",
     label: "UI Case Study",
-    start: 100,
-    stop: 200,
+    start: 70,
+    stop: 90,
+  },
+  {
+    to: "darts",
+    label: "Digital Arts",
+    start: 90,
+    stop: 100,
   },
 ];
 elementScrollIntoViewPolyfill();
@@ -32,6 +38,7 @@ const Navigator = () => {
   const wH = window.innerHeight;
   const { theme } = useContext(ThemeContext);
   const linksRef = useRef([]);
+
   const getScrollPercent = () => {
     const a = window.scrollY;
     const b = document.body.scrollHeight - wH;
@@ -41,6 +48,7 @@ const Navigator = () => {
     }
     setProg(progress <= 100 ? progress : 100);
   };
+
   const updNav = (progress) => {
     stopPoints.forEach((obj, ind) => {
       if (progress >= obj.start && progress <= obj.stop) {
@@ -48,6 +56,7 @@ const Navigator = () => {
       } else linksRef.current[ind].classList.remove("active");
     });
   };
+
   const getDevW = () => {
     setTransY(window.innerWidth > 1099);
   };
@@ -61,6 +70,7 @@ const Navigator = () => {
       setProg(0);
     };
   }, []);
+
   return (
     <div
       id="navigator-cont"
@@ -102,7 +112,6 @@ const Navigator = () => {
               key={ind}
               onClick={() => {
                 const element = document.getElementById(el.to);
-                console.log(el.to);
                 element.scrollIntoView({
                   block: "center",
                   behavior: "smooth",
