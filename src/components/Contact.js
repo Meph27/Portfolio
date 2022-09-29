@@ -27,7 +27,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          if (result.status == 200) {
+          if (result.status === 200) {
             setStat(true);
           }
           setMessage("Sent! Thank you.");
