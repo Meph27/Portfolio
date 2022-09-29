@@ -6,6 +6,7 @@ import SincereteaPOS from "./components/SincereteaPOS";
 import LessandraPASS from "./components/LessandraPASS";
 import MallAppCS from "./components/MallAppCS";
 import DigiArts from "./components/DigiArts";
+import Contact from "./components/Contact";
 
 const themes = {
   default: {
@@ -59,6 +60,7 @@ const ThemeWrapper = (props) => {
         <LessandraPASS />
         <MallAppCS />
         <DigiArts />
+        <Contact />
         <Navigator />
       </div>
     </ThemeContext.Provider>

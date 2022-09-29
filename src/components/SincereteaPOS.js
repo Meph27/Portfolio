@@ -1,5 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SincereteaPOS = () => {
   return (

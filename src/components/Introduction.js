@@ -1,17 +1,21 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../ThemeWrapper";
-import Loader from "./Loader";
 
 const Introduction = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <section id="introduction" style={{ fontFamily: theme.mainFont }}>
-      <div style={{ position: "relative" }}>
-        <h1>Ralph Montilla</h1>
+      <img
+        id="my-pic"
+        src={require("../assets/my-pic.jpeg")}
+        alt="profile photo"
+      />
+      <h1>Ralph Montilla</h1>
+      <span id="titles">
         <h3>Engineer</h3>
         <h3>Developer</h3>
         <h3>Artist</h3>
-      </div>
+      </span>
     </section>
   );
 };

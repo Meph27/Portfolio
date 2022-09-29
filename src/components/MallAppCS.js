@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 const MallAppCS = () => {
   return (
     <section id="mallappcs">
-      <h3 data-aos="fade-down">Online Mall App UI/UX Case Study</h3>
+      <h3 data-aos="fade-down">Online Mall App UI/UX Practice</h3>
       <div className="carousel-info">
         <Carousel>
           <div>

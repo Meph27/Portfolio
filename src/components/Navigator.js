@@ -9,23 +9,29 @@ const stopPoints = [
     start: 0,
     stop: 10,
   },
-  { to: "background", label: "About Me", start: 10, stop: 30 },
-  { to: "sincereteapos", label: "Sinceretea POS", start: 30, stop: 50 },
+  { to: "background", label: "About Me", start: 10, stop: 25 },
+  { to: "sincereteapos", label: "Sinceretea POS", start: 25, stop: 40 },
   {
     to: "lessandrapass",
     label: "Lessandra HOA",
-    start: 50,
-    stop: 70,
+    start: 40,
+    stop: 55,
   },
   {
     to: "mallappcs",
-    label: "UI Case Study",
-    start: 70,
-    stop: 90,
+    label: "UI Practice",
+    start: 55,
+    stop: 70,
   },
   {
     to: "darts",
     label: "Digital Arts",
+    start: 70,
+    stop: 90,
+  },
+  {
+    to: "contact",
+    label: "Contact Me",
     start: 90,
     stop: 100,
   },
@@ -38,7 +44,7 @@ const Navigator = () => {
   const wH = window.innerHeight;
   const { theme } = useContext(ThemeContext);
   const linksRef = useRef([]);
-
+  const mainCol = "rgb(212, 57, 30)";
   const getScrollPercent = () => {
     const a = window.scrollY;
     const b = document.body.scrollHeight - wH;
@@ -89,7 +95,7 @@ const Navigator = () => {
           style={
             transY
               ? {
-                  backgroundColor: theme.accentColor,
+                  backgroundColor: mainCol,
                   transform: `scaleY(${-prog / 100})`,
                   height: "100%",
                 }
@@ -105,7 +111,7 @@ const Navigator = () => {
         {stopPoints.map((el, ind) => {
           const progr = -prog;
           const activ = progr >= el.start && progr <= el.stop;
-          const op = progr >= el.start ? 1 : 0.4;
+          const op = progr >= el.start;
           return (
             <span
               className={"a-cont " + (activ ? "active" : "")}
@@ -122,9 +128,9 @@ const Navigator = () => {
                 {ind ? (
                   <span
                     style={{
-                      color: theme.accentColor,
+                      color: activ ? mainCol : theme.accentColor,
                       backgroundColor: theme.mainColor,
-                      opacity: op,
+                      opacity: op ? 1 : 0.4,
                     }}
                   >
                     {el.label}
@@ -135,8 +141,8 @@ const Navigator = () => {
                 data-index={ind}
                 ref={(ref) => (linksRef.current[ind] = ref)}
                 style={{
-                  backgroundColor: theme.accentColor,
-                  opacity: op,
+                  backgroundColor: op ? mainCol : theme.accentColor,
+                  opacity: op ? 1 : 0,
                   width: !ind && "0px",
                 }}
                 className={"button "}

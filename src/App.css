@@ -8,6 +8,7 @@
   -webkit-user-select: none;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: y mandatory;
+  --var-main: rgb(212, 57, 30);
 }
 
 body::-webkit-scrollbar {
@@ -21,6 +22,17 @@ body::-webkit-scrollbar {
 }
 h4 {
   color: black;
+}
+
+input,
+textarea {
+  border: 2px solid rgb(36, 36, 36);
+  font-size: large;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid var(--var-main) !important;
+  outline: 2px solid rgba(182, 105, 111, 0.463);
 }
 
 section {
@@ -39,6 +51,29 @@ section {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  width: 100%;
+  padding: 0.5em 0;
+  background-color: var(--var-main);
+  color: white;
+  font-family: inherit;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:active {
+  transform: scale(1.1);
+}
+button:hover {
+  background-color: rgb(230, 176, 176);
+  color: var(--var-main);
+}
+button:disabled {
+  background-color: rgb(149, 148, 148);
 }
 
 section h3 {
@@ -69,15 +104,28 @@ section h3 {
 
 #introduction h1 {
   font: 800 200px;
-  color: rgb(212, 57, 30);
+  font-family: "Oswald";
+  color: var(--var-main);
 }
 #introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   /* background-image: url("../public/paintsss.png"); */
   background-size: auto 100vh;
   background-repeat: no-repeat;
   background-position: left;
 }
-
+#my-pic {
+  min-width: 20%;
+  max-width: 200px;
+  border-radius: 50%;
+}
+#titles h3 {
+  display: inline;
+  margin: 0 1em;
+}
 #navigator-cont {
   width: 90%;
   height: max-content;
@@ -119,7 +167,6 @@ section h3 {
 .link-label span {
   padding: 3px 10px;
   font-size: x-small;
-
   opacity: 0.4;
 }
 
@@ -129,6 +176,7 @@ section h3 {
   opacity: 1 !important;
   transform: scale(1.2);
 }
+
 .loader-cont {
   width: 200px;
   height: 200px;
@@ -175,6 +223,7 @@ section h3 {
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   #introduction h1 {
     font-size: 110px;
+    margin: 0.2em;
   }
   section {
     padding: 0 40px;
@@ -184,7 +233,26 @@ section h3 {
     max-width: 800px;
     font-weight: 600;
   }
+  #abtme-cont {
+    margin-top: 80px;
+  }
+  #abtme-cont,
+  #contact-cont {
+    margin-right: 240px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3em;
+  }
 
+  #bg-educ h2 {
+    margin-bottom: 40px;
+  }
+  #desc-me {
+    width: 400px;
+  }
+  #p-me {
+    width: 450px;
+  }
   .proj-desc p {
     margin: 0;
     text-align: left;
@@ -280,5 +348,36 @@ section h3 {
   .link-label span {
     font-size: 11px;
     font-weight: 800;
+  }
+  #contact-cont {
+    display: flex;
+  }
+
+  #contact-mes {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+  }
+  #contact-cont h4 {
+    font-size: x-large;
+    margin-top: 1em;
+  }
+  #contact-mes label {
+    margin-top: 0.25em;
+  }
+  #contact-mes input,
+  #contact-mes textarea {
+    display: block;
+    padding: 0.5em;
+    margin: 1em 0;
+  }
+  #contact-mes input,
+  textarea {
+    width: 400px;
+  }
+  #contact-mes textarea {
+    font-family: inherit;
+    height: 100px;
+    resize: none;
   }
 }
