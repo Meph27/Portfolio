@@ -2,7 +2,7 @@
   "name": "web-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://meph27.github.io/web-portfolio",
+  "homepage": "https://resmontilla.me",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@testing-library/jest-dom": "^5.16.5",
