@@ -121,10 +121,7 @@ section h3 {
   max-width: 200px;
   border-radius: 50%;
 }
-#titles h3 {
-  display: inline;
-  margin: 0 1em;
-}
+
 #navigator-cont {
   width: 90%;
   height: max-content;
@@ -133,7 +130,10 @@ section h3 {
   left: 50%;
   display: block;
 }
-
+.thumbs.animated {
+  height: 10vh;
+  margin: 0;
+}
 #navprog-cont {
   display: flex;
   position: fixed;
@@ -168,7 +168,11 @@ section h3 {
   font-size: x-small;
   opacity: 0.4;
 }
-
+.img-span img {
+  height: 35px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
 #navigator .active,
 .button:hover,
 .button:focus {
@@ -218,11 +222,51 @@ section h3 {
     background-color: rgb(88, 176, 210);
   }
 }
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+#contact-cont {
+  display: flex;
+  flex-direction: column;
+}
 
+#contact-mes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+#contact-cont h4 {
+  margin: 5px 0;
+}
+#contact-mes label {
+  margin-top: 0.25em;
+}
+#contact-mes input,
+#contact-mes textarea {
+  display: block;
+  padding: 0.5em;
+}
+#contact-mes input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+#contact-mes textarea {
+  font-family: inherit;
+  resize: none;
+}
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   #introduction h1 {
     font-size: 110px;
     margin: 0.2em;
+  }
+  #titles h3 {
+    display: inline;
+    margin: 0 1em;
   }
   section {
     padding: 0 40px;
@@ -262,11 +306,7 @@ section h3 {
     height: auto;
     display: block;
   }
-  .img-span img {
-    height: 35px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-  }
+
   .carousel-info {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -293,6 +333,9 @@ section h3 {
   .thumb {
     max-height: 60px;
     cursor: pointer;
+  }
+  .control-arrow {
+    background-color: black;
   }
 
   .slide .legend {
@@ -348,13 +391,12 @@ section h3 {
   }
   #contact-cont {
     margin-left: 5vw;
-    display: flex;
+    flex-direction: row;
   }
 
   #contact-mes {
-    display: flex;
-    flex-direction: column;
-    margin-right: 100px;
+    margin-right: 8vw;
+    box-sizing: border-box;
   }
   #contact-cont h4 {
     font-size: x-large;
@@ -366,16 +408,15 @@ section h3 {
   #contact-mes input,
   #contact-mes textarea {
     display: block;
-    padding: 0.5em;
     margin: 1em 0;
+    box-sizing: border-box;
   }
-  #contact-mes input,
-  textarea {
-    width: 400px;
+
+  button {
+    margin-top: 10px;
   }
+
   #contact-mes textarea {
-    font-family: inherit;
     height: 10vh;
-    resize: none;
   }
 }
