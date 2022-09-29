@@ -347,6 +347,7 @@ section h3 {
     font-weight: 800;
   }
   #contact-cont {
+    margin-left: 5vw;
     display: flex;
   }
 
@@ -357,7 +358,7 @@ section h3 {
   }
   #contact-cont h4 {
     font-size: x-large;
-    margin-top: 5px;
+    margin: 5px 0;
   }
   #contact-mes label {
     margin-top: 0.25em;
