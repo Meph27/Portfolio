@@ -54,7 +54,6 @@ a {
 }
 
 button {
-  width: 100%;
   padding: 0.5em 0;
   background-color: var(--var-main);
   color: white;
