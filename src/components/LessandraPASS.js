@@ -52,7 +52,7 @@ const LessandraPASS = () => {
           </p>
           <h4>Key Features</h4>
           <p>
-            Some of the features includes: QR/RFID registration and scanning,
+            Some of the features include: QR/RFID registration and scanning,
             role-based login, bulletin, notification system, email verification,
             comprehensive entry records, guest and resident management.
           </p>

@@ -44,7 +44,7 @@ const SincereteaPOS = () => {
           </p>
           <h4>Key Features</h4>
           <p>
-            Some of the features includes: point of sale system, branch-based
+            Some of the features include: point of sale system, branch-based
             login, offline functionality, online receipt, and sales record.
           </p>
           <h4>Technology</h4>
